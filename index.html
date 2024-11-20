@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
     <!--!  заголовок сторінки -->
     <title>Homework JavaScript</title>
     
@@ -25,41 +30,46 @@
 </head>
 
 <body>
-    <h1 class="title-main">Домашні завдання з курсу JavaScript</h1>
+    <div class="container">
+        <h1 class="title-main">Домашні завдання з курсу<br>‹<span class='j'>Java</span>Script›
+        </h1>
+        
+        <!--! Список уроків -->
+        <ul class="list">
+            <li>
+                <div class="circle c1"><p>1</p></div>
+                <a 
+                    href="./lesson-1/lesson-1.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    Знайомство з JS Змінні Типи даних Взаємодія з користувачем
+                </a>
+            </li>
+            <li>
+                <div class="circle c2"><p>2</p></div>
+                <a 
+                    href="./lesson-2/lesson-2.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    Основні оператори<br> Числа
+                </a>
+            </li>
+            <li>
+                <div class="circle c3"><p>3</p></div>
+                <a 
+                    href="./lesson-3/lesson-3.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    Рядки
+                </a>
+            </li>
     
-    <!--! Список уроків -->
-    <ul class="list">
-        <li>
-            <a 
-                href="./lesson-1/lesson-1.html"
-                target="_blank"
-                rel="noreferrer noopener"
-            >
-                Урок-01. Знайомство з JS. Змінні. Типи даних. Взаємодія з користувачем.
-            </a>
-        </li>
-        <li>
-            <a 
-                href="./lesson-2/lesson-2.html"
-                target="_blank"
-                rel="noreferrer noopener"
-            >
-                Урок-02. Основні оператори. Числа.
-            </a>
-        </li>
-        <li>
-            <a 
-                href="./lesson-3/lesson-3.html"
-                target="_blank"
-                rel="noreferrer noopener"
-            >
-                Урок-03. Рядки.
-            </a>
-        </li>
-        <!--? Додайте темі наступних уроків тут: -->
-
-    </ul>
-    <script src='./lesson-1/js/lesson-1.js' type='module' defer></script>
+        </ul>
+    </div>
+    <!-- <script src='./lesson-1/js/lesson-1.js' type='module' defer></script> -->
 </body>
 
 </html>
