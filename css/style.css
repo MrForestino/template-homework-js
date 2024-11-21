@@ -45,7 +45,8 @@ li{
 a{
     
     color: #FFFFFF;
-    width: 290px;
+    width: 260px;
+    height: 110px;
 }
 p{
     font-size: 64px;
@@ -76,6 +77,8 @@ p{
     height: 135px;
     background-color: #0f0f1a;
     border-radius: 50%;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.7);
 }
 .c1{
     background-color: #FF5151;
