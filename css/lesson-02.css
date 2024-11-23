@@ -1,0 +1,26 @@
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+body {
+	background-color: #17131C;
+	font-family: 'Courier Prime', sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+h1{
+	margin: 30px 0 80px;
+	text-align: center;
+	font-size: 32px;
+}
+.j{
+	color: #FFCF4B;
+}
+.js{
+	font-size: 40px;
+}
+@media screen and (min-width:480){
+	.container{
+			width: 480px;
+	}
+}
