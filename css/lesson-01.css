@@ -76,7 +76,9 @@ button{
 .js{
 	font-size: 40px;
 }
-
+.home-link{
+	margin: 0 auto;
+}
 .card-code {
 	max-width: 600px;
 	max-height: 450px;
