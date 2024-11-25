@@ -48,12 +48,21 @@ li{
 	width: 600px;
 	height: 450px;
 	padding: 10px;
-	margin-top: 50px;
-	margin-left: 50px;
+
 	overflow-y: auto;
+}
+.card-code {
+	width: 600px;
+	max-height: 450px;
+  overflow-y: auto;
+  background-color: #2d2d2d;
+	border-radius: 10px;
 }
 .card-container{
 	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	margin-top: 50px;
 }
 button{
 	width: 400px;
@@ -80,17 +89,48 @@ button{
 	margin: 0 auto;
 	margin-top: 26px;
 }
-.card-code {
-	max-width: 600px;
-	max-height: 450px;
-	margin-top: 50px;
-	margin-left: 50px;
-  overflow-y: auto;
-  background-color: #2d2d2d;
-	border-radius: 10px;
-}
-@media screen and (min-width:480){
-	.container{
-			width: 480px;
+
+@media screen and (min-width: 320px) and (max-width: 1350px){
+  .container {
+    width: 100%;
+    padding: 0 10px; /* Додаємо відступи для зручності */
+  }
+
+  body {
+    font-size: 18px; /* Зменшуємо шрифт для мобільних */
+  }
+
+  h1 {
+    font-size: 24px; /* Робимо заголовок компактнішим */
+    margin: 20px 0 40px;
+  }
+
+  ul {
+    width: 100%;
+    height: auto; /* Автоматична висота для зручності */
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+	.card-container{
+		display: flex;
+		flex-direction: column;
 	}
+  .card-list,
+  .card-code {
+    width: 100%;
+    margin: 20px 0;
+    margin-left: 0;
+  }
+
+  button {
+    width: 100%;
+    height: 60px; /* Робимо кнопку компактнішою */
+    font-size: 18px;
+  }
+
+  .home-link {
+		margin: 0 auto;
+  }
 }

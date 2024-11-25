@@ -63,8 +63,52 @@ p{
     position: relative;
     z-index: 1; 
 }
-@media screen and (min-width:480){
-    .container{
-        width: 480px;
+@media screen and (min-width: 320px) and (max-width: 1350px) {
+    .container {
+        width: 100%;
+        padding: 0 15px; /* Внутрішні відступи для невеликих екранів */
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 18px; /* Зменшення базового розміру шрифту */
+    }
+
+    .title-main {
+        font-size: 24px; /* Зменшення розміру заголовка */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        width: 100%; /* Список займає всю ширину */
+        height: auto; /* Автоматична висота */
+        gap: 10px; /* Менший проміжок між елементами */
+        padding: 10px; /* Внутрішні відступи */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-direction: column; /* Вертикальне розташування елементів */
+
+    }
+
+    li {
+        margin-left: 20px; /* Зменшення лівого відступу */
+        list-style-position: inside; /* Номер/кружок всередині списку */
+    }
+
+    a {
+        width: 100%; /* Посилання займають всю ширину */
+        height: auto; /* Автоматична висота */
+        font-size: 16px; /* Менший розмір шрифту */
+        text-align: center; /* Текст центрується */
+        font-weight: 600; /* Трохи зменшено товщину */
+    }
+
+    a:hover {
+        color: #F82D59; /* Зберігаємо стиль при наведенні */
+    }
+
+    p {
+        font-size: 28px; /* Компактний розмір тексту */
     }
 }
