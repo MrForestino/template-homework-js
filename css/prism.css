@@ -2,7 +2,7 @@
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
 code[class*=language-],
 pre[class*=language-] {
-    color: #ccc;
+    color: #FFE9D7;
     background: 0 0;
     font-family: 'Fira Code', sans-serif;
     font-size: 14px;
@@ -22,7 +22,7 @@ pre[class*=language-] {
 }
 
 pre[class*=language-] {
-    padding: 1em;
+    padding: 0.2em;
     margin: .5em 0;
     overflow: auto
 }
@@ -47,7 +47,7 @@ pre[class*=language-] {
 }
 
 .token.punctuation {
-    color: #ccc
+    color: #FFE9D7
 }
 
 .token.attr-name,
@@ -87,7 +87,7 @@ pre[class*=language-] {
 .token.regex,
 .token.string,
 .token.variable {
-    color: #7ec699
+    color: #35c86d
 }
 
 .token.entity,

@@ -1,3 +1,5 @@
+document.getElementById("startScript").addEventListener("click", function() {
+
 "use strict"
 console.log('Lesson-1 JS');
 //? Створити змінну з іменем age і присвоїти їй значення свого віку.
@@ -80,3 +82,4 @@ const accAlert = confirm("Чи підтверджуєте дію?");
 accAlert
 ? alert("Дякую за підтвердження! ✅")
 : alert("Дію відмінено! ❌") ;
+});

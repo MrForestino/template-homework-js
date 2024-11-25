@@ -15,30 +15,30 @@ h1{
     margin: 0 auto;
 }
 ul{
-    margin: 0 auto;
-    width: 1350px;
-    height: 860px;
-    background-color: #1B1621;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    align-items: start;
-    gap: 15px;
-    border-radius: 10px;
 
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin: 0 auto;
+  width: 1350px;
+  height: 860px;
+  background-color: #1B1621;
+  gap: 15px;
+  border-radius: 10px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .title-lesson{
     margin: 0 auto;
 	/* color: #FFE9D7; */
     color: #ff305d;
-	font-weight: 700;
+		font-weight: 700;
 }
 li{
 	color: #17131C;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 500;
 	list-style-type: disc;
 	margin-left: 10px;
 }
@@ -50,7 +50,10 @@ li{
 	padding: 10px;
 	margin-top: 50px;
 	margin-left: 50px;
-	
+	overflow-y: auto;
+}
+.card-container{
+	display: flex;
 }
 button{
 	width: 400px;
@@ -77,8 +80,11 @@ button{
 .card-code {
 	max-width: 600px;
 	max-height: 450px;
+	margin-top: 50px;
+	margin-left: 50px;
     overflow-y: auto;
     background-color: #2d2d2d;
+	border-radius: 10px;
 }
 @media screen and (min-width:480){
 	.container{
