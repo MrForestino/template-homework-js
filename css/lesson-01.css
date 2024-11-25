@@ -78,6 +78,7 @@ button{
 }
 .home-link{
 	margin: 0 auto;
+	margin-top: 26px;
 }
 .card-code {
 	max-width: 600px;
