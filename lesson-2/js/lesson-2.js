@@ -1,3 +1,5 @@
+document.getElementById("startScript").addEventListener("click", function() {
+"use strict"
 console.log('Lesson-2 JS');
 
 //[1] Створити змінні для зберігання температури за Цельсієм та Фаренгейтом. Перевести температуру з Цельсія у Фаренгейти за допомогою формули та вивести результат в консоль.
@@ -61,3 +63,4 @@ let strVal = '200';
 let convToInt = parseInt(strVal);
 let convToStr = intVal.toString();
 console.log('[9]\n Рядок перетворено у ціле число: ',convToInt, '\n Рядок перетворено у рядок: ',convToStr ); 
+});

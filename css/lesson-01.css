@@ -65,7 +65,7 @@ button{
 	background-color: #261F2F;
 	border-radius: 10px;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 .j{ 
     color: #FFCF4B;
@@ -78,6 +78,7 @@ button{
 }
 .home-link{
 	margin: 0 auto;
+	margin-top: 26px;
 }
 .card-code {
 	max-width: 600px;
