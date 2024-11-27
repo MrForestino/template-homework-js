@@ -9,9 +9,9 @@
         <!--!  заголовок сторінки -->
 
         <link href="themes/prism.css" rel="stylesheet" />
-        <title>Lesson-3 JS</title>
+        <title>Lesson-12 JS</title>
         <!--! завантаження зображення до заголовку сторінки -->
-        <link href="https://img.icons8.com/ios/16/3.png" type="image/x-icon" rel="shortcut icon">
+        <link href="https://img.icons8.com/ios/16/12.png" type="image/x-icon" rel="shortcut icon">
 
         <link rel="stylesheet" href="../prismJS/prism.css">
         <link rel="stylesheet" href="../css/main.min.css">
@@ -28,13 +28,21 @@
                 <h1 class="title-main">
                     Домашні завдання з курсу ‹<span class='j'>J</span><span class="s">S</span>›
                 </h1>
-                <p class="title-lesson">03. Рядки</p>
+                <p class="title-lesson">12. Об’єкти. Перебір об'єкту</p>
                 <div class="card-container">
                     <ul class="card-list">
-                        <li>Вивести result в консоль. Перевірити тип змінної result= 5+5+’5’</li>
-                        <li>Створіть змінну email з вашою електронною адресою. Напишіть скрипт, який перевіряє чи містить змінна email символ @ і рахує загальну кількість символів. Результат виведіть в консоль.</li>
-                        <li>Записати в окремих змінних кожне слово: My, name, is. Поєднати всі слова в змінну fullName. До змінної fullName додати ‘Viktor’. fullName вивести в консоль.</li>
-                        <li>Створіть змінну userName з ім’ям користувача і змінну payment з сумою до оплати. За допомогою шаблонного рядка виведіть на екран через alert повідомлення на прикладі цього: «Дякуємо, Олександро! До сплати 300 гривень»</li>
+                        <li>Напиши скрипт, який, для об'єкта user, послідовно:<br>
+                            <br>- додає поле mood зі значенням 'happy'
+                            <br>- замінює значення hobby на 'skydiving'
+                            <br>- замінює значення premium на false
+                            <br>- виводить вміст об'єкта user в форматі ключ:значення <br>- використовуючи Object.keys() і for...of
+                        </li><br>
+                        <li>Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.</li><br>
+                        <li>Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".</li><br>
+                        <li>Напиши функцію countTotalSalary(employees) приймаючу об'єкт зарплат. Функція рахує загальну суму зарплати працівників і повертає її. Кожне поле об'єкта, переданого в функцію, має вигляд "ім'я":"зарплата".</li><br>
+                        <li>Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів і ім'я властивості. Повертає масив значень певної властивості prop з кожного об'єкта в масиві.</li><br>
+                        <li>Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).</li><br>
+                        <li>Напиши сценарій керування особистим кабінетом інтернет-банку. Є об'єкт account в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.</li>
                         </ul>
                         <div class="card-code">
                             <pre><code class="language-javascript">
@@ -48,7 +56,7 @@
         
         <!--! Підключення скриптів -->
         <!-- <script src="../prismJS/prism.js"></script> -->
-        <script src="./js/lesson-3.js" type="module" defer></script>
+        <script src="./js/lesson-12.js" type="module" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     </body>
 </html>
