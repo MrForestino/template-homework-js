@@ -9,9 +9,9 @@
         <!--!  заголовок сторінки -->
 
         <link href="themes/prism.css" rel="stylesheet" />
-        <title>Lesson-3 JS</title>
+        <title>Lesson-16 JS</title>
         <!--! завантаження зображення до заголовку сторінки -->
-        <link href="https://img.icons8.com/ios/16/3.png" type="image/x-icon" rel="shortcut icon">
+        <link href="https://img.icons8.com/ios/16/16.png" type="image/x-icon" rel="shortcut icon">
 
         <link rel="stylesheet" href="../prismJS/prism.css">
         <link rel="stylesheet" href="../css/main.min.css">
@@ -28,13 +28,31 @@
                 <h1 class="title-main">
                     Домашні завдання з курсу ‹<span class='j'>J</span><span class="s">S</span>›
                 </h1>
-                <p class="title-lesson">03. Рядки</p>
+                <p class="title-lesson">16. ООП</p>
                 <div class="card-container">
                     <ul class="card-list">
-                        <li>Вивести result в консоль. Перевірити тип змінної result= 5+5+’5’</li>
-                        <li>Створіть змінну email з вашою електронною адресою. Напишіть скрипт, який перевіряє чи містить змінна email символ @ і рахує загальну кількість символів. Результат виведіть в консоль.</li>
-                        <li>Записати в окремих змінних кожне слово: My, name, is. Поєднати всі слова в змінну fullName. До змінної fullName додати ‘Viktor’. fullName вивести в консоль.</li>
-                        <li>Створіть змінну userName з ім’ям користувача і змінну payment з сумою до оплати. За допомогою шаблонного рядка виведіть на екран через alert повідомлення на прикладі цього: «Дякуємо, Олександро! До сплати 300 гривень»</li>
+                        <li>Напиши функцію-конструктор Account, яка створює об'єкт з властивостями login і email. В prototype функції-конструктора добав метод getInfo(), який виводить в консоль значення полів login і email об'єкта який його викликав</li><br>
+                        <li>Напиши клас User для створення користувача з наступними властивостями:<br>
+                        - name — рядо<br>
+                        - age — число<br>
+                        - followers — число<br>
+                        Добав метод getInfo(), який, виводить рядок: User ${ім'я} is ${вік} years old and has ${кількість фоловерів} followers
+                        </li><br>
+                        <li>Напиши клас Storage, який буде створювати об'єкти для управління складом товарів. При виклику буде отримувати один аргумент - початковий масив товарів, і записувати його у властивість items.<br>
+                        Додай методи класу:<br>
+                        - getItems() — повертає масив поточних товарів<br>
+                        - getItems() — повертає масив поточних товарів<br>
+                        - getItems() — повертає масив поточних товарів
+                        </li><br>
+                        <li>Напиши клас StringBuilder. На вхід він отримує один параметр — рядок, який записує у властивість _value.<br>
+                        Додай класу наступний функціонал:<br>
+                        - Геттер value — повертає поточне значення поля _value<br>
+                        - Метод append(str) — отримує параметр str (рядок) і додає його в кінець _value<br>
+                        - Метод prepend(str) — отримує параметр str (рядок) і додає його на початок _value<br>
+                        - Метод pad(str) — отримує параметр str (рядок) і додає його на початок і в кінець _value     
+                        </li><br>
+                        <li>Напиши клас Car із зазначеними властивостями і методами.
+                        </li>
                         </ul>
                         <div class="card-code">
                             <pre><code class="language-javascript">
@@ -48,7 +66,7 @@
         
         <!--! Підключення скриптів -->
         <!-- <script src="../prismJS/prism.js"></script> -->
-        <script src="./js/lesson-3.js" type="module" defer></script>
+        <script src="./js/lesson-16.js" type="module" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     </body>
 </html>

@@ -9,9 +9,9 @@
         <!--!  заголовок сторінки -->
 
         <link href="themes/prism.css" rel="stylesheet" />
-        <title>Lesson-3 JS</title>
+        <title>Lesson-18 JS</title>
         <!--! завантаження зображення до заголовку сторінки -->
-        <link href="https://img.icons8.com/ios/16/3.png" type="image/x-icon" rel="shortcut icon">
+        <link href="https://img.icons8.com/ios/16/18.png" type="image/x-icon" rel="shortcut icon">
 
         <link rel="stylesheet" href="../prismJS/prism.css">
         <link rel="stylesheet" href="../css/main.min.css">
@@ -28,13 +28,26 @@
                 <h1 class="title-main">
                     Домашні завдання з курсу ‹<span class='j'>J</span><span class="s">S</span>›
                 </h1>
-                <p class="title-lesson">03. Рядки</p>
+                <p class="title-lesson">18. DOM (Частина 2)</p>
                 <div class="card-container">
                     <ul class="card-list">
-                        <li>Вивести result в консоль. Перевірити тип змінної result= 5+5+’5’</li>
-                        <li>Створіть змінну email з вашою електронною адресою. Напишіть скрипт, який перевіряє чи містить змінна email символ @ і рахує загальну кількість символів. Результат виведіть в консоль.</li>
-                        <li>Записати в окремих змінних кожне слово: My, name, is. Поєднати всі слова в змінну fullName. До змінної fullName додати ‘Viktor’. fullName вивести в консоль.</li>
-                        <li>Створіть змінну userName з ім’ям користувача і змінну payment з сумою до оплати. За допомогою шаблонного рядка виведіть на екран через alert повідомлення на прикладі цього: «Дякуємо, Олександро! До сплати 300 гривень»</li>
+                        <li>В HTML є список категорій ul#categories.<br>
+                        - Тварини<br>
+                        - Продукти <br>
+                        - Технології<br>
+                        Напиши скрипт, який виконає наступні операції.Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item. Вийде 'У списку 3 категорії.'.Для кожного елемента li.item в списку ul#categories, знайде і виведе в консоль текст заголовка елемента (тега h2) і кількість елементів в категорії (всіх вкладених в нього елементів li).<br>
+                        Наприклад, для першої категорії вийде:<br>
+                        - Категорія: Тварини<br>
+                        - Кількість елементів: 4</li><br>
+                        <li>В HTML є пустий список ul#ingredients.<br>Напиши скрипт, який для кожного елемента масиву ingredients створить окремий li, після чого вставить всі li за одну операцію в список ul.ingredients. Для створення DOM-вузлів використовуй document.createElement().</li><br>
+                        <li>Напиши скрипт для створення галереї зображень по масиву даних.<br>В HTML є список ul#gallery.<br>
+                        Використовуй масив об'єктів images для створення тегів img вкладених в li. Для створення розмітки використовуй шаблонні рядки і insertAdjacentHTML().<br>
+                        - Всі елементи галереї повинні додаватися в DOM за одну операцію вставки.<br>
+                        - Додай мінімальне оформлення галереї флексбоксами або грід через css-класи.</li><br>
+                        <li>Лічильник складається зі спана і кнопок, які повинні збільшувати і зменшувати значення лічильника на 1.<br>
+                        - Створи змінну counterValue в якій буде зберігається поточне значення лічильника.<br>
+                        - Створи функції increment і decrement для збільшення і зменшення значення лічильника.<br>
+                        - Додай слухачі кліків на кнопки, виклики функцій та оновлення інтерфейсу</li>
                         </ul>
                         <div class="card-code">
                             <pre><code class="language-javascript">
@@ -48,7 +61,7 @@
         
         <!--! Підключення скриптів -->
         <!-- <script src="../prismJS/prism.js"></script> -->
-        <script src="./js/lesson-3.js" type="module" defer></script>
+        <script src="./js/lesson-18.js" type="module" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     </body>
 </html>
