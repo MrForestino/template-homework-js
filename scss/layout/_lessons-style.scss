@@ -12,6 +12,11 @@
 	height: 860px;
 
 }
+.active{
+	background-color: #FFE9D7;
+	border-radius: 5px;
+	
+}
 body {
 	// background-color: #17131C;
 	background-color: #FFE9D7;
@@ -93,6 +98,10 @@ a:hover{
 	color: #96785F;
 	font-weight: 700;
 }
+.list-menu{
+	font-size: 18px;
+
+}
 .card{
 	display: flex;
 	flex-direction: column;
@@ -116,6 +125,12 @@ a:hover{
 		flex-direction: column;
 
 		padding: 10px;
+	}
+	&-menu-list{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		overflow-y: auto;
 	}
 	&-list{
 		background-color: #FFE9D7;

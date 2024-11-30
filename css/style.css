@@ -137,7 +137,8 @@ p{
     }
 
     a:hover {
-        color: #F82D59;
+        /* color: #F82D59; */
+        color: #654c39;
     }
 
     p {
