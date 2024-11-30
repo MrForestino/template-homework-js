@@ -3,33 +3,63 @@
     margin: 0 auto;
 }
 body {
-    background-color: #17131C;
+    /* background-color: #17131C; */
+    background-color: #FFE9D7;
     font-family: 'Fira Code', sans-serif;
     font-size: 24px;
 }
+h1{
+    width: 550px;
+    height: 80px;
+    background-color: #FFE9D7;
+    border-radius:10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.title-lesson{
+display: flex;
 
+
+margin: 0 auto;
+margin-top: 30px;
+margin-bottom: 45px;
+}
 .title-main {
     text-align: center;
     font-size: 32px;
-    color: #FFE9D7;
+    /* color: #FFE9D7; */
+    color:#96785F;
     margin: 0 auto;
-
-    margin-top: 30px;
-    margin-bottom: 45px;
     
 }
+.blok-js{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC300;
+    height: 80px;
+    width: 80px;
+    border-radius: 0 10px 10px 0;
+}
 .j{ 
-    color: #FFCF4B;
+    color: #AA8200;
+    font-weight: 700;
+    font-size: 32px;
 }
 .s{
-    color: #FF8000;
+    color: #212121;
+    font-weight: 700;
+    font-size: 32px;
 }
 ul{
     
     margin: 0 auto;
     width: 1350px;
     height: auto;
-    background-color: #1B1621;
+    /* background-color: #1B1621; */
+    background-color: #F4D3B8;
     display: flex;
     flex-direction: column;
 
@@ -44,7 +74,8 @@ ul{
 }
 
 a{
-    color: #FFE9D7;
+    /* color: #FFE9D7; */
+    color: #96785F;
     width: 260px;
     height: 110px;
     transition: color 0.5s ease-in-out;
@@ -54,7 +85,8 @@ li{
     margin-left: 60px;
 }
 a:hover{
-    color: #F82D59;
+    /* color: #F82D59; */
+    color: #654c39;
     transition: color 0.5s ease-in-out;
 }
 p{
