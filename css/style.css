@@ -8,7 +8,7 @@ body {
     font-family: 'Fira Code', sans-serif;
     font-size: 24px;
 }
-h1{
+.title-main{
     width: 550px;
     height: 80px;
     background-color: #FFE9D7;
@@ -20,11 +20,8 @@ h1{
 }
 .title-lesson{
 display: flex;
-
-
+width: 550px;
 margin: 0 auto;
-margin-top: 30px;
-margin-bottom: 45px;
 }
 .title-main {
     text-align: center;
@@ -53,7 +50,7 @@ margin-bottom: 45px;
     font-weight: 700;
     font-size: 32px;
 }
-ul{
+.list{
     
     margin: 0 auto;
     width: 1350px;
@@ -63,16 +60,15 @@ ul{
     display: flex;
     flex-direction: column;
 
-    align-items: start;
-    gap: 15px;
+
+    padding: 40px;
     border-radius: 10px;
-
-    padding-bottom: 40px;
-
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
+ul{
+    margin-top: 20px;
+}
 a{
     /* color: #FFE9D7; */
     color: #96785F;
@@ -95,6 +91,53 @@ p{
     position: relative;
     z-index: 1; 
 }
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+    .title-main{
+
+        height: 60px;
+        background-color: #FFE9D7;
+        border-radius:10px 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        
+    }
+    .title-lesson{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    }
+    .title-main {
+        text-align: center;
+        font-size: 14px;
+        /* color: #FFE9D7; */
+        color:#96785F;
+        margin: 0 auto;
+        
+    }
+    .blok-js{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFC300;
+        height: 60px;
+        width: 30%;
+        border-radius: 0 10px 10px 0;
+    }
+    .j{ 
+        color: #AA8200;
+        font-weight: 700;
+        font-size: 32px;
+    }
+    .s{
+        color: #212121;
+        font-weight: 700;
+        font-size: 32px;
+    }
+}
+
 @media screen and (min-width: 320px) and (max-width: 1350px) {
     .container {
         width: 100%;
@@ -107,18 +150,15 @@ p{
     }
 
     .title-main {
-        font-size: 24px; 
-        margin-top: 20px;
-        margin-bottom: 30px;
+        font-size: 18px;
     }
 
-    ul {
+    .list {
         width: 100%; 
         height: auto; 
         gap: 10px; 
         padding: 10px; 
         margin-top: 20px;
-        margin-bottom: 20px;
         flex-direction: column; 
 
     }
