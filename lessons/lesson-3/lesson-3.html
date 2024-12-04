@@ -205,7 +205,32 @@
                         </ul>
                         <div class="card-code">
                             <pre><code class="language-javascript">
-    //none
+    //[1]
+    const result = 5+5+'5';
+    console.log(result)
+    console.log(typeof result)
+    
+    //[2]
+    const email = 'vb2526@gmail.com';
+    const EmailHasAt = email.indexOf('@') !== -1;
+                            
+    if(EmailHasAt){
+        const EmailLenght = email.length;
+        console.log(EmailLenght, EmailHasAt)
+    }
+
+    //[3]                         
+    const my = "My";
+    const name = "name";
+    const is = "is";                     
+    let fullName = `${my} ${name} ${is} `;                        
+    fullName += 'Viktor';
+    console.log(fullName);
+     
+    //[4]
+    let UserName = 'Vladyslav';                       
+    let payment = 300;                       
+    alert(`Дякуємо, ${UserName}! До сплати ${payment} ₴ 💵`);
                             </code></pre>
                         </div>
                 </div>
