@@ -60,5 +60,6 @@ document.getElementById("checkForm").addEventListener("click", function() {
 });
 
 document.getElementById("startScript").addEventListener("click", function() {
-document.getElementById("hw4").style.display = "block";
+document.getElementById("hw4").style.display = "flex";
+document.getElementById("hw4").style.flexDirection = "column";
 });

@@ -294,4 +294,7 @@ button {
   .card-container {
     flex-direction: column;
   }
+}
+.form {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
