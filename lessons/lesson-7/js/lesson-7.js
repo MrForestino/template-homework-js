@@ -37,12 +37,27 @@ console.log('--------------------');
 
 console.log('---------#6---------');
 let setNum = [10, 23, 5, 102, 40, 11, 421, 23, 155, 50];
-let maxNum = Math.max(...setNum)
-console.log(maxNum);
+// let maxNum = Math.max(...setNum)
+// console.log(maxNum);
+
+let max = 0;
+for(i = 0; i < setNum.length; i++){
+	if(setNum[i] > max){
+		max = setNum[i]
+	}
+}
+console.log(max);
+
 console.log('--------------------');
 
 console.log('---------#7---------');
 let findDoubleNum = [12, 4, 55, 17, 85, 35, 44, 65, 90, 7];
-let filterNum = findDoubleNum.filter(i => i % 2 === 0);
-console.log(filterNum);
+let doubleNumber = [];
+// let filterNum = findDoubleNum.filter(i => i % 2 === 0);
+for(let i = 0; i < findDoubleNum.length;i++){
+	if(findDoubleNum[i] % 2 === 0){
+		doubleNumber.push(findDoubleNum[i])
+	}
+}
+console.log(doubleNumber);
 console.log('--------------------');
