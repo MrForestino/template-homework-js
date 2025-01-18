@@ -17,6 +17,7 @@ console.log('--------------------');
 
 console.log('---------#3---------');
 
+
 console.log('--------------------');
 
 console.log('---------#4---------');
@@ -61,3 +62,5 @@ for(let i = 0; i < findDoubleNum.length;i++){
 }
 console.log(doubleNumber);
 console.log('--------------------');
+
+
