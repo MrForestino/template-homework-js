@@ -46,7 +46,7 @@ console.log('---------#6---------');
 let setNum = [10, 23, 5, 102, 40, 11, 421, 23, 155, 50];
 
 let max = 0;
-for(i = 0; i < setNum.length; i++){
+for(let i = 0; i < setNum.length; i++){
 	if(setNum[i] > max){
 		max = setNum[i]
 	}
