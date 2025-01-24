@@ -1,5 +1,5 @@
 console.log('Lesson-7 JS');
-// document.getElementById("startScript").addEventListener('click', function(){
+document.getElementById("startScript").addEventListener('click', function(){
 	console.log('---------#1---------');
 
 let num = [1, 2, 3];
@@ -68,4 +68,4 @@ console.log('--------------------');
 
 
 
-// });
+});
