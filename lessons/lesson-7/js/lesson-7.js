@@ -1,6 +1,6 @@
 console.log('Lesson-7 JS');
-
-console.log('---------#1---------');
+document.getElementById("startScript").addEventListener('click', function(){
+	console.log('---------#1---------');
 
 let num = [1, 2, 3];
 console.log("значення другого елемента до зміни:",num);
@@ -67,3 +67,5 @@ console.log(doubleNumber);
 console.log('--------------------');
 
 
+
+});
