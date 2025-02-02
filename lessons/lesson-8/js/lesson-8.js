@@ -37,3 +37,11 @@ console.log("Картки: ",cards);
 
 const cardToUpdate = "Карточка-4";
 
+const cardIndexToUpdate = cards.indexOf(cardToUpdate);
+
+if (cardIndexToUpdate !== -1){
+	cards.splice(cardIndexToUpdate, 1, "Карточка-4 is update")
+};
+
+console.log("Картки: ",cards);
+
