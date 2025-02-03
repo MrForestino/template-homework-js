@@ -45,9 +45,6 @@
 
 // console.log("--------------------------------------------");
 
-
-
-
 // //! Стрілкові(cтрілочні) функції
 // console.warn("Стрілкові(cтрілочні) функції:");
 // //? Стрілочні функції мають скорочений, лаконічніший синтаксис,
@@ -127,30 +124,67 @@
 //     другий: 21
 // };
 
+// let groundCoffee;
+// let hotWater;
+// let coffee;
 
-let groundCoffee;
-let hotWater;
-let coffee;
+// const makeCoffee = {
+//     coffee: null,
+//     makesGroundCoffee(weight){
+//         const groundCoffee = weight;
+//         console.log(!!groundCoffee);
+//         return groundCoffee;
+//     },
+//     makesHotWater(volume){
+//         const hotWater = volume;
+//         console.log(!!hotWater);
+//         return hotWater;
+//     },
+//     getCoffee(weight, volume){
+//         this.coffee = this.makesGroundCoffee(weight) + "gr" + this.makesHotWater(volume) + "ml";
+//         console.log(!!this.coffee);
+//     }
+// };
+// console.log(makeCoffee.coffee);
 
-const makeCoffee = {
-    coffee: null,
-    makesGroundCoffee(weight){
-        const groundCoffee = weight;
-        console.log(!!groundCoffee);
-        return groundCoffee;
-    },
-    makesHotWater(volume){
-        const hotWater = volume;
-        console.log(!!hotWater);
-        return hotWater;
-    },
-    getCoffee(weight, volume){
-        this.coffee = this.makesGroundCoffee(weight) + "gr" + this.makesHotWater(volume) + "ml";
-        console.log(!!this.coffee);
-    }
-};
-console.log(makeCoffee.coffee);
+// makeCoffee.getCoffee(30, 250)
+// console.log(makeCoffee.coffee);
 
-makeCoffee.getCoffee(30, 250)
-console.log(makeCoffee.coffee);
-7
+const bookShelf = {
+	books: ['The Last Kingdom']
+	// getBooks() {
+	//     return this.books;
+	// },
+	// addBook(bookName) {
+	//     this.books.push(bookName);
+	// },
+	// removeBook(bookName) {
+	//     const bookIndex = this.books.indexOf(bookName);
+	//     this.books.splice(bookIndex, 1);
+	// },
+}
+console.log('books_before:', bookShelf)
+
+//todo: ✴️ var.1
+//todo: Додавання до об'єкту метода "getBooks":
+
+const a = ''
+
+// bookShelf.getBooks = "Java";
+
+function getBooks() {
+	return this.books
+}
+
+bookShelf.getBooks = function () {
+	return this.books
+}
+bookShelf.addBooks = function (bookName) {
+	return this.books.push(bookName)
+}
+bookShelf.removeBooks = function (bookName) {
+	const bookIndex = this.books.push(bookName)
+	this.books.splice(bookIndex, 1)
+}
+
+console.log('books_before:', bookShelf)
