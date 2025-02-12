@@ -10,6 +10,17 @@ console.log(
 //? - з використання анонімної стрілкової колбек-функції з неявним поверненням.
 //! Код виконаного завдання
 
+const functionHelloWorld = (callback) => {
+    callback();
+};
+const helloWorld = () => {
+    console.log("Hello world");
+};
+functionHelloWorld(helloWorld);
+
+
+functionHelloWorld(() => console.log("Hello World!"));
+
 console.log("--------------------------------------------------");
 
 
@@ -33,6 +44,17 @@ console.log(
 const min = 1;
 const max = 10;
 
+const generatesRandomNumber = () => Math.floor(Math.random() * max) + min;
+
+
+const functionRandomNumber = (callback) => {
+
+   const randNum = callback();
+   console.log("Random number is: ", randNum);
+   return randNum === 5 ? "✅ Ви вгадали число!" : "❌ Ви НЕ вгадали число.";
+}
+console.log(functionRandomNumber(generatesRandomNumber));
+
 console.log("--------------------------------------------------");
 
 
@@ -41,19 +63,35 @@ console.log(
     "%c [3] ",
     "color: yellow; background-color: #2274A5",
 );
-//? Створи стрілкову колбек-функцію generatesRandomNumber1to5 з неявним поверненням,
-//? яка генерує та повертає випадкове число від 1 до 5.
-//? Створи стрілкову колбек-функцію convertSize з неявним поверненням,
-//? яка приймає будь яке числове значення, додає до нього "px" 
-//? та повертає результат у такому вигляді:
-//? наприклад, приймає 2 -> повертає 2px, або приймає 5 -> повертає 5px.
-//? Зроби функцію вищого порядку convertRandomNumberSize, 
-//? яка приймає два аргумента:
-//? функцію generatesRandomNumber1to5 та функцію convertSize яка приймає
-//? випадкове число від 1 до 5 від функції generatesRandomNumber1to5.
-//? Функція convertRandomNumberSize повертає результат 
-//? перетворення випадкового числа від 1 до 5 від функції convertSize.
+
+
+
+
 //! Код виконаного завдання
+
+//? Створи стрілкову колбек-функцію generatesRandomNumber1to5 з неявним поверненням,яка генерує та повертає випадкове число від 1 до 5
+const generatesRandomNumber1to5 = () => Math.floor(Math.random() * 5) + 1;
+
+//? Створи стрілкову колбек-функцію convertSize з неявним поверненням, яка приймає будь яке числове значення, додає до нього "px"  та повертає результат
+//? у такому вигляді: наприклад, приймає 2 -> повертає 2px, або приймає 5 -> повертає 5px
+const convertSize = (num) => `${num}px`;
+
+//? Зроби функцію вищого порядку convertRandomNumberSize,  яка приймає два аргумента: функцію generatesRandomNumber1to5 та функцію convertSize яка приймає випадкове число від 1 до 5 від функції generatesRandomNumber1to5
+const convertRandomNumberSize = (randomFunc, convertFunc) => {
+    const randomNumber = randomFunc();
+    console.log("Згенероване число:", randomNumber);
+
+//? Функція convertRandomNumberSize повертає результат перетворення випадкового числа від 1 до 5 від функції convertSize
+    const convertedSize = convertFunc(randomNumber);
+    console.log("Конвертоване значення:", convertedSize);
+
+    return convertedSize;
+};
+
+
+const res = convertRandomNumberSize(generatesRandomNumber1to5, convertSize);
+
+console.log("Фінальний результат:", res);
 
 console.log("--------------------------------------------------");
 
@@ -64,9 +102,9 @@ console.log(
     "color: yellow; background-color: #2274A5",
 );
 //? Напиши функцію, applyCallbackToEachElement яка приймає масив чисел і колбек-функцію.
-//? Функція повинна застосовувати колбек-функцію
-//? до кожного елементу масиву та повертати новий масив,
-//? що містить результати застосування колбек-функції до кожного елементу.
+
+//? Функція повинна застосовувати колбек-функцію до кожного елементу масиву та повертати новий масив, що містить результати застосування колбек-функції до кожного елементу.
+
 //! Код виконаного завдання
 const applyCallbackToEachElement = (array, callback) => {
     //todo: написати тіло функції

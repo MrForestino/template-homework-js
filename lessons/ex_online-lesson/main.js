@@ -112,7 +112,7 @@
 //     третій: 34,
 //     четвертий: 89,
 //     "п'ятий": 144,
-//     // перший: 6765, //! ❓❓❓
+//     // перший: 6765, //!
 // };
 // //? Замінемо послідовність "індексів"(властивостей (properties))
 // //? та їх знаачень на іншу:
@@ -150,8 +150,8 @@
 // makeCoffee.getCoffee(30, 250)
 // console.log(makeCoffee.coffee);
 
-const bookShelf = {
-	books: ['The Last Kingdom']
+// const bookShelf = {
+// 	books: ['The Last Kingdom']
 	// getBooks() {
 	//     return this.books;
 	// },
@@ -162,29 +162,122 @@ const bookShelf = {
 	//     const bookIndex = this.books.indexOf(bookName);
 	//     this.books.splice(bookIndex, 1);
 	// },
-}
-console.log('books_before:', bookShelf)
+// }
+// console.log('books_before:', bookShelf)
 
 //todo: ✴️ var.1
 //todo: Додавання до об'єкту метода "getBooks":
 
-const a = ''
+// const a = ''
 
 // bookShelf.getBooks = "Java";
 
-function getBooks() {
-	return this.books
-}
+// function getBooks() {
+// 	return this.books
+// }
 
-bookShelf.getBooks = function () {
-	return this.books
-}
-bookShelf.addBooks = function (bookName) {
-	return this.books.push(bookName)
-}
-bookShelf.removeBooks = function (bookName) {
-	const bookIndex = this.books.push(bookName)
-	this.books.splice(bookIndex, 1)
-}
+// bookShelf.getBooks = function () {
+// 	return this.books
+// }
+// bookShelf.addBooks = function (bookName) {
+// 	return this.books.push(bookName)
+// }
+// bookShelf.removeBooks = function (bookName) {
+// 	const bookIndex = this.books.push(bookName)
+// 	this.books.splice(bookIndex, 1)
+// }
 
-console.log('books_before:', bookShelf)
+// console.log('books_before:', bookShelf)
+
+
+
+
+//! ПРАКТИКА-13 (Урок-13_JS)
+//todo [1]
+console.log(
+  "%c [1] ",
+  "color: yellow; background-color: #2274A5",
+);
+//? Деструктуризувати наступні об’єкти:
+// user
+const user = {
+  name: 'John',
+  age: 30,
+  email: 'john@example.com'
+};
+
+const { name, age, email } = user;
+console.log("name: ",name); // 'John'
+console.log("age: ",age);   // 30
+console.log("email: ",email);   // 'john@example.com'
+
+// car
+const car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2020,
+  features: ['power windows', 'rear camera', 'navigation'],
+  safety: {
+    airbags: true,
+    antilockBrakes: true,
+    stabilityControl: true
+  },
+};
+
+const {
+	make, 
+	model, 
+	year, 
+	features: [feature1, feature2, feature3], safety:{airbags, antilockBrakes, stabilityControl}
+} = car;
+
+console.log("make: ", make);
+console.log("model: ",model);
+console.log("year: ", year);
+console.log("feature1: ", feature1);
+console.log("feature2: ", feature2);
+console.log("feature3: ", feature3);
+
+console.log();
+console.log("safety: ", airbags, antilockBrakes, stabilityControl );
+
+
+// movie
+const movie = {
+  title: 'The Shawshank Redemption',
+  director: {
+    name: 'Frank Darabont',
+    nationality: 'American'
+  },
+  actors: ['Tim Robbins', 'Morgan Freeman'],
+  releaseYear: 1994,
+  ratings: {
+    imdb: 9.3,
+    rottenTomatoes: 90
+  },
+};
+
+// books
+const books = {
+  count: 3,
+  list: [
+    {
+      title: 'The Great Gatsby',
+      author: 'F. Scott Fitzgerald',
+      year: 1925
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      author: 'Harper Lee',
+      year: 1960
+    },
+    {
+      title: '1984',
+      author: 'George Orwell',
+      year: 1949
+    }
+  ],
+};
+//! Код виконаного завдання
+
+console.log("--------------------------------------------");
