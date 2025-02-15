@@ -194,90 +194,318 @@
 
 //! ПРАКТИКА-13 (Урок-13_JS)
 //todo [1]
+// console.log(
+//   "%c [1] ",
+//   "color: yellow; background-color: #2274A5",
+// );
+// //? Деструктуризувати наступні об’єкти:
+// // user
+// const user = {
+//   name: 'John',
+//   age: 30,
+//   email: 'john@example.com'
+// };
+
+// const { name, age, email } = user;
+// console.log("name: ",name); // 'John'
+// console.log("age: ",age);   // 30
+// console.log("email: ",email);   // 'john@example.com'
+
+// // car
+// const car = {
+//   make: 'Toyota',
+//   model: 'Camry',
+//   year: 2020,
+//   features: ['power windows', 'rear camera', 'navigation'],
+//   safety: {
+//     airbags: true,
+//     antilockBrakes: true,
+//     stabilityControl: true
+//   },
+// };
+
+// const {
+// 	make, 
+// 	model, 
+// 	year, 
+// 	features: [feature1, feature2, feature3], safety:{airbags, antilockBrakes, stabilityControl}
+// } = car;
+
+// console.log("make: ", make);
+// console.log("model: ",model);
+// console.log("year: ", year);
+// console.log("feature1: ", feature1);
+// console.log("feature2: ", feature2);
+// console.log("feature3: ", feature3);
+
+// console.log();
+// console.log("safety: ", airbags, antilockBrakes, stabilityControl );
+
+
+// // movie
+// const movie = {
+//   title: 'The Shawshank Redemption',
+//   director: {
+//     name: 'Frank Darabont',
+//     nationality: 'American'
+//   },
+//   actors: ['Tim Robbins', 'Morgan Freeman'],
+//   releaseYear: 1994,
+//   ratings: {
+//     imdb: 9.3,
+//     rottenTomatoes: 90
+//   },
+// };
+
+// // books
+// const books = {
+//   count: 3,
+//   list: [
+//     {
+//       title: 'The Great Gatsby',
+//       author: 'F. Scott Fitzgerald',
+//       year: 1925
+//     },
+//     {
+//       title: 'To Kill a Mockingbird',
+//       author: 'Harper Lee',
+//       year: 1960
+//     },
+//     {
+//       title: '1984',
+//       author: 'George Orwell',
+//       year: 1949
+//     }
+//   ],
+// };
+// //! Код виконаного завдання
+
+// console.log("--------------------------------------------");
+
+// books
+// const books = {
+//   count: 3,
+//   list: [
+//     {
+//       title: 'The Great Gatsby',
+//       author: 'F. Scott Fitzgerald',
+//       year: 1925
+//     },
+//     {
+//       title: 'To Kill a Mockingbird',
+//       author: 'Harper Lee',
+//       year: 1960
+//     },
+//     {
+//       title: '1984',
+//       author: 'George Orwell',
+//       year: 1949
+//     }
+//   ],
+// };
+// //! Код виконаного завдання
+// const {
+//   count, 
+//   list: [
+//     {title: title1,author: author1,year:year1},
+//     {title: title2,author: author2,year:year2},
+//     {title: title3,author: author3,year:year3}
+//   ]
+//   } = books;
+
+
+
+// console.log("count: ", count);
+
+// console.log("title1: ", title1);
+// console.log("autor1: ", author1);
+// console.log("year1: ", year1);
+
+// console.log("title2: ", title2);
+// console.log("autor2: ", author2);
+// console.log("year2: ", year2);
+
+// console.log("title3: ", title3);
+// console.log("autor3: ", author3);
+// console.log("year3: ", year3);
+
+
+//todo [1]
 console.log(
   "%c [1] ",
   "color: yellow; background-color: #2274A5",
 );
-//? Деструктуризувати наступні об’єкти:
-// user
-const user = {
-  name: 'John',
-  age: 30,
-  email: 'john@example.com'
+//? ✴️ Створіть об'єкт "bankAccount" з трьома властивостями:
+//?  "ownerName", "accountNumber", "balance"
+//? та додайте їм будь-яких логічних значень значень.
+//? ✴️ За допомогою додавання властивостей
+//? додайте до об'єкту метод "deposit",
+//? який, використовуючи методи взаємодії з користувачем,
+//? додає гроші на рахунок,
+//? та виводить повідомлення про залишок на рахунку
+//? дублюючи його в консоль.
+//? ✴️ За допомогою додавання властивостей,
+//? додайте до об'єкту метод "withdraw",
+//? який, використовуючи методи взаємодії з користувачем,
+//? дозволяє знімати гроші з рахунку,
+//? якщо на рахунку достатньо коштів,
+//? та виводить повідомлення про залишок на рахунку,
+//? дублюючи його в консоль.
+//? Якщо на рахунку не вистачає коштів, то він виводить повідомлення:
+//? "⛔️ Не достатньо коштів на вашому рахунку!",
+//? дублюючи його в консоль.
+//? ✳️ За допомогою виклика методу "deposit" об'єкта "bankAccount" додай кошти на рахунок.
+//? ✳️ За допомогою виклика методу "withdraw" об'єкта "bankAccount" зніми кошти з рахуноку.
+//! Код виконаного завдання
+// const bankAccount = {
+//   ownerName: "Jack Nicholson",
+//   accountNumber: 1111222233334444,
+//   balance: 10000,
+// };
+
+// console.log("bankAccount Before: ", bankAccount);
+
+
+// bankAccount.deposit = function(money){
+//   console.log("deposit");
+
+//   this.balance += money;
+
+//   console.log("Our balance: ", this.balance)
+
+// };
+
+// bankAccount.withdraw = function(money){
+//   console.log("withdraw");
+
+//   if(this.balance < money){
+//     console.log("⛔️ Не достатньо коштів на вашому рахунку!")
+//     return
+
+//   }
+//   this.balance -= money;
+
+//   console.log("Our balance: ", this.balance)
+  
+// };
+
+// console.log(bankAccount.deposit(500));
+// console.log(bankAccount.withdraw(610));
+
+
+
+// console.log("bankAccount after: ", bankAccount);
+
+
+console.log("--------------------------------------------------");
+
+
+//todo [6]
+console.log(
+  "%c [6] ",
+  "color: yellow; background-color: #2274A5",
+);
+//? ✴️ Напиши сценарій керування особистим кабінетом інтернет-банку.
+//? Є об'єкт account в якому необхідно реалізувати методи 
+//? для роботи з балансом та історією транзакцій.
+//? ✳️ Типів транзацкій всього два.
+//? Можна покласти або зняти гроші з рахунку.
+const Transaction = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withdraw',
 };
+// {
+//   id,
+//   type,
+//   amount
+// }
 
-const { name, age, email } = user;
-console.log("name: ",name); // 'John'
-console.log("age: ",age);   // 30
-console.log("email: ",email);   // 'john@example.com'
+//todo: Кожна транзакція - це об'єкт з властивостями: id, type і amount
 
-// car
-const car = {
-  make: 'Toyota',
-  model: 'Camry',
-  year: 2020,
-  features: ['power windows', 'rear camera', 'navigation'],
-  safety: {
-    airbags: true,
-    antilockBrakes: true,
-    stabilityControl: true
-  },
-};
+const account = {
+  //todo: Поточний баланс рахунку
+  balance: 0,
+  //todo:  Історія транзакцій
+  transactions: [],
 
-const {
-	make, 
-	model, 
-	year, 
-	features: [feature1, feature2, feature3], safety:{airbags, antilockBrakes, stabilityControl}
-} = car;
-
-console.log("make: ", make);
-console.log("model: ",model);
-console.log("year: ", year);
-console.log("feature1: ", feature1);
-console.log("feature2: ", feature2);
-console.log("feature3: ", feature3);
-
-console.log();
-console.log("safety: ", airbags, antilockBrakes, stabilityControl );
-
-
-// movie
-const movie = {
-  title: 'The Shawshank Redemption',
-  director: {
-    name: 'Frank Darabont',
-    nationality: 'American'
-  },
-  actors: ['Tim Robbins', 'Morgan Freeman'],
-  releaseYear: 1994,
-  ratings: {
-    imdb: 9.3,
-    rottenTomatoes: 90
-  },
-};
-
-// books
-const books = {
-  count: 3,
-  list: [
-    {
-      title: 'The Great Gatsby',
-      author: 'F. Scott Fitzgerald',
-      year: 1925
-    },
-    {
-      title: 'To Kill a Mockingbird',
-      author: 'Harper Lee',
-      year: 1960
-    },
-    {
-      title: '1984',
-      author: 'George Orwell',
-      year: 1949
+  //todo:  Метод створює і повертає об'єкт транзакції.
+  //todo:  Приймає суму і тип транзакції.
+  createTransaction(amount, type) {
+    const transactionObj = {
+      id: this.transactions.length + 1,
+      type,//type: type
+      amount//amount: amount
     }
-  ],
+    console.log(transactionObj);
+    return
+   },
+  //todo:  Метод відповідає за додавання суми до балансу.
+  //todo:  Приймає суму танзакції.
+  //todo:  Викликає createTransaction для створення об'єкта транзакції
+  //todo:  після чого додає його в історію транзакцій
+  deposit(amount) {
+    this.balance += amount;
+
+    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+
+
+    this.transactions.push(newTransaction);
+    console.log(this.transactions)
+
+    return console.log('deposit')
+   },
+
+  //todo:  Метод відповідає за зняття суми з балансу.
+  //todo:  Приймає суму танзакції.
+  //todo:  Викликає createTransaction для створення об'єкта транзакції
+  //todo:  після чого додає його в історію транзакцій.
+  //todo:  Якщо amount більше, ніж поточний баланс, виводь повідомлення
+  //todo:  про те, що зняття такої суми не можливо, недостатньо коштів.
+  withdraw(amount) { 
+    if (amount > this.balance) {
+      result.textContent = 'Error, not enough money'
+      return console.log('Error, not enough money')
+     }
+
+    this.balance -= amount;
+
+    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+
+
+    this.transactions.push(newTransaction);
+    console.log(this.transactions)
+    console.log(this.getBalance())
+    return console.log('withdraw')
+  },
+
+  //todo:  Метод повертає поточний баланс
+  getBalance() {
+    return this.balance;
+   },
+
+  //todo:  Метод шукає і повертає об'єкт транзакції по id
+  getTransactionDetails(id) { },
+
+  //todo:  Метод повертає кількість коштів
+  //todo:  певного типу транзакції з усієї історії транзакцій
+  getTransactionTotal(type) { },
 };
 //! Код виконаного завдання
+account.deposit(100);
+account.deposit(100);
+account.deposit(100);
+account.deposit(100);
 
-console.log("--------------------------------------------");
+account.withdraw(100);
+console.log("--------------------------------------------------");
+
+// const currentTime = new Date();
+
+// console.log("currentTime:", currentTime); //! Поточна дата та час
+
+// const lessonStartTime = "Sat Feb 15 2025 13:00:00 GMT+0200";
+// const lessonEndTime = "Sat Feb 15 2025 14:00:00 GMT+0200";
+
+// while (currentTime >= lessonStartTime && currentTime < lessonEndTime) {
+//     console.log(`«Менторська година» (додаткове заняття):`);
+// };
