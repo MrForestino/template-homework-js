@@ -152,16 +152,16 @@
 
 // const bookShelf = {
 // 	books: ['The Last Kingdom']
-	// getBooks() {
-	//     return this.books;
-	// },
-	// addBook(bookName) {
-	//     this.books.push(bookName);
-	// },
-	// removeBook(bookName) {
-	//     const bookIndex = this.books.indexOf(bookName);
-	//     this.books.splice(bookIndex, 1);
-	// },
+// getBooks() {
+//     return this.books;
+// },
+// addBook(bookName) {
+//     this.books.push(bookName);
+// },
+// removeBook(bookName) {
+//     const bookIndex = this.books.indexOf(bookName);
+//     this.books.splice(bookIndex, 1);
+// },
 // }
 // console.log('books_before:', bookShelf)
 
@@ -188,9 +188,6 @@
 // }
 
 // console.log('books_before:', bookShelf)
-
-
-
 
 //! ПРАКТИКА-13 (Урок-13_JS)
 //todo [1]
@@ -225,9 +222,9 @@
 // };
 
 // const {
-// 	make, 
-// 	model, 
-// 	year, 
+// 	make,
+// 	model,
+// 	year,
 // 	features: [feature1, feature2, feature3], safety:{airbags, antilockBrakes, stabilityControl}
 // } = car;
 
@@ -240,7 +237,6 @@
 
 // console.log();
 // console.log("safety: ", airbags, antilockBrakes, stabilityControl );
-
 
 // // movie
 // const movie = {
@@ -305,15 +301,13 @@
 // };
 // //! Код виконаного завдання
 // const {
-//   count, 
+//   count,
 //   list: [
 //     {title: title1,author: author1,year:year1},
 //     {title: title2,author: author2,year:year2},
 //     {title: title3,author: author3,year:year3}
 //   ]
 //   } = books;
-
-
 
 // console.log("count: ", count);
 
@@ -329,175 +323,167 @@
 // console.log("autor3: ", author3);
 // console.log("year3: ", year3);
 
-
 //todo [1]
-console.log(
-  "%c [1] ",
-  "color: yellow; background-color: #2274A5",
-);
-//? ✴️ Створіть об'єкт "bankAccount" з трьома властивостями:
-//?  "ownerName", "accountNumber", "balance"
-//? та додайте їм будь-яких логічних значень значень.
-//? ✴️ За допомогою додавання властивостей
-//? додайте до об'єкту метод "deposit",
-//? який, використовуючи методи взаємодії з користувачем,
-//? додає гроші на рахунок,
-//? та виводить повідомлення про залишок на рахунку
-//? дублюючи його в консоль.
-//? ✴️ За допомогою додавання властивостей,
-//? додайте до об'єкту метод "withdraw",
-//? який, використовуючи методи взаємодії з користувачем,
-//? дозволяє знімати гроші з рахунку,
-//? якщо на рахунку достатньо коштів,
-//? та виводить повідомлення про залишок на рахунку,
-//? дублюючи його в консоль.
-//? Якщо на рахунку не вистачає коштів, то він виводить повідомлення:
-//? "⛔️ Не достатньо коштів на вашому рахунку!",
-//? дублюючи його в консоль.
-//? ✳️ За допомогою виклика методу "deposit" об'єкта "bankAccount" додай кошти на рахунок.
-//? ✳️ За допомогою виклика методу "withdraw" об'єкта "bankAccount" зніми кошти з рахуноку.
-//! Код виконаного завдання
-// const bankAccount = {
-//   ownerName: "Jack Nicholson",
-//   accountNumber: 1111222233334444,
-//   balance: 10000,
+// console.log(
+//   "%c [1] ",
+//   "color: yellow; background-color: #2274A5",
+// );
+// //? ✴️ Створіть об'єкт "bankAccount" з трьома властивостями:
+// //?  "ownerName", "accountNumber", "balance"
+// //? та додайте їм будь-яких логічних значень значень.
+// //? ✴️ За допомогою додавання властивостей
+// //? додайте до об'єкту метод "deposit",
+// //? який, використовуючи методи взаємодії з користувачем,
+// //? додає гроші на рахунок,
+// //? та виводить повідомлення про залишок на рахунку
+// //? дублюючи його в консоль.
+// //? ✴️ За допомогою додавання властивостей,
+// //? додайте до об'єкту метод "withdraw",
+// //? який, використовуючи методи взаємодії з користувачем,
+// //? дозволяє знімати гроші з рахунку,
+// //? якщо на рахунку достатньо коштів,
+// //? та виводить повідомлення про залишок на рахунку,
+// //? дублюючи його в консоль.
+// //? Якщо на рахунку не вистачає коштів, то він виводить повідомлення:
+// //? "⛔️ Не достатньо коштів на вашому рахунку!",
+// //? дублюючи його в консоль.
+// //? ✳️ За допомогою виклика методу "deposit" об'єкта "bankAccount" додай кошти на рахунок.
+// //? ✳️ За допомогою виклика методу "withdraw" об'єкта "bankAccount" зніми кошти з рахуноку.
+// //! Код виконаного завдання
+// // const bankAccount = {
+// //   ownerName: "Jack Nicholson",
+// //   accountNumber: 1111222233334444,
+// //   balance: 10000,
+// // };
+
+// // console.log("bankAccount Before: ", bankAccount);
+
+// // bankAccount.deposit = function(money){
+// //   console.log("deposit");
+
+// //   this.balance += money;
+
+// //   console.log("Our balance: ", this.balance)
+
+// // };
+
+// // bankAccount.withdraw = function(money){
+// //   console.log("withdraw");
+
+// //   if(this.balance < money){
+// //     console.log("⛔️ Не достатньо коштів на вашому рахунку!")
+// //     return
+
+// //   }
+// //   this.balance -= money;
+
+// //   console.log("Our balance: ", this.balance)
+
+// // };
+
+// // console.log(bankAccount.deposit(500));
+// // console.log(bankAccount.withdraw(610));
+
+// // console.log("bankAccount after: ", bankAccount);
+
+// console.log("--------------------------------------------------");
+
+// //todo [6]
+// console.log(
+//   "%c [6] ",
+//   "color: yellow; background-color: #2274A5",
+// );
+// //? ✴️ Напиши сценарій керування особистим кабінетом інтернет-банку.
+// //? Є об'єкт account в якому необхідно реалізувати методи
+// //? для роботи з балансом та історією транзакцій.
+// //? ✳️ Типів транзацкій всього два.
+// //? Можна покласти або зняти гроші з рахунку.
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
 // };
+// // {
+// //   id,
+// //   type,
+// //   amount
+// // }
 
-// console.log("bankAccount Before: ", bankAccount);
+// //todo: Кожна транзакція - це об'єкт з властивостями: id, type і amount
 
+// const account = {
+//   //todo: Поточний баланс рахунку
+//   balance: 0,
+//   //todo:  Історія транзакцій
+//   transactions: [],
 
-// bankAccount.deposit = function(money){
-//   console.log("deposit");
-
-//   this.balance += money;
-
-//   console.log("Our balance: ", this.balance)
-
-// };
-
-// bankAccount.withdraw = function(money){
-//   console.log("withdraw");
-
-//   if(this.balance < money){
-//     console.log("⛔️ Не достатньо коштів на вашому рахунку!")
+//   //todo:  Метод створює і повертає об'єкт транзакції.
+//   //todo:  Приймає суму і тип транзакції.
+//   createTransaction(amount, type) {
+//     const transactionObj = {
+//       id: this.transactions.length + 1,
+//       type,//type: type
+//       amount//amount: amount
+//     }
+//     console.log(transactionObj);
 //     return
+//    },
+//   //todo:  Метод відповідає за додавання суми до балансу.
+//   //todo:  Приймає суму танзакції.
+//   //todo:  Викликає createTransaction для створення об'єкта транзакції
+//   //todo:  після чого додає його в історію транзакцій
+//   deposit(amount) {
+//     this.balance += amount;
 
-//   }
-//   this.balance -= money;
+//     const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
 
-//   console.log("Our balance: ", this.balance)
-  
+//     this.transactions.push(newTransaction);
+//     console.log(this.transactions)
+
+//     return console.log('deposit')
+//    },
+
+//   //todo:  Метод відповідає за зняття суми з балансу.
+//   //todo:  Приймає суму танзакції.
+//   //todo:  Викликає createTransaction для створення об'єкта транзакції
+//   //todo:  після чого додає його в історію транзакцій.
+//   //todo:  Якщо amount більше, ніж поточний баланс, виводь повідомлення
+//   //todo:  про те, що зняття такої суми не можливо, недостатньо коштів.
+//   withdraw(amount) {
+//     if (amount > this.balance) {
+//       result.textContent = 'Error, not enough money'
+//       return console.log('Error, not enough money')
+//      }
+
+//     this.balance -= amount;
+
+//     const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+
+//     this.transactions.push(newTransaction);
+//     console.log(this.transactions)
+//     console.log(this.getBalance())
+//     return console.log('withdraw')
+//   },
+
+//   //todo:  Метод повертає поточний баланс
+//   getBalance() {
+//     return this.balance;
+//    },
+
+//   //todo:  Метод шукає і повертає об'єкт транзакції по id
+//   getTransactionDetails(id) { },
+
+//   //todo:  Метод повертає кількість коштів
+//   //todo:  певного типу транзакції з усієї історії транзакцій
+//   getTransactionTotal(type) { },
 // };
+// //! Код виконаного завдання
+// account.deposit(100);
+// account.deposit(100);
+// account.deposit(100);
+// account.deposit(100);
 
-// console.log(bankAccount.deposit(500));
-// console.log(bankAccount.withdraw(610));
-
-
-
-// console.log("bankAccount after: ", bankAccount);
-
-
-console.log("--------------------------------------------------");
-
-
-//todo [6]
-console.log(
-  "%c [6] ",
-  "color: yellow; background-color: #2274A5",
-);
-//? ✴️ Напиши сценарій керування особистим кабінетом інтернет-банку.
-//? Є об'єкт account в якому необхідно реалізувати методи 
-//? для роботи з балансом та історією транзакцій.
-//? ✳️ Типів транзацкій всього два.
-//? Можна покласти або зняти гроші з рахунку.
-const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
-};
-// {
-//   id,
-//   type,
-//   amount
-// }
-
-//todo: Кожна транзакція - це об'єкт з властивостями: id, type і amount
-
-const account = {
-  //todo: Поточний баланс рахунку
-  balance: 0,
-  //todo:  Історія транзакцій
-  transactions: [],
-
-  //todo:  Метод створює і повертає об'єкт транзакції.
-  //todo:  Приймає суму і тип транзакції.
-  createTransaction(amount, type) {
-    const transactionObj = {
-      id: this.transactions.length + 1,
-      type,//type: type
-      amount//amount: amount
-    }
-    console.log(transactionObj);
-    return
-   },
-  //todo:  Метод відповідає за додавання суми до балансу.
-  //todo:  Приймає суму танзакції.
-  //todo:  Викликає createTransaction для створення об'єкта транзакції
-  //todo:  після чого додає його в історію транзакцій
-  deposit(amount) {
-    this.balance += amount;
-
-    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
-
-
-    this.transactions.push(newTransaction);
-    console.log(this.transactions)
-
-    return console.log('deposit')
-   },
-
-  //todo:  Метод відповідає за зняття суми з балансу.
-  //todo:  Приймає суму танзакції.
-  //todo:  Викликає createTransaction для створення об'єкта транзакції
-  //todo:  після чого додає його в історію транзакцій.
-  //todo:  Якщо amount більше, ніж поточний баланс, виводь повідомлення
-  //todo:  про те, що зняття такої суми не можливо, недостатньо коштів.
-  withdraw(amount) { 
-    if (amount > this.balance) {
-      result.textContent = 'Error, not enough money'
-      return console.log('Error, not enough money')
-     }
-
-    this.balance -= amount;
-
-    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
-
-
-    this.transactions.push(newTransaction);
-    console.log(this.transactions)
-    console.log(this.getBalance())
-    return console.log('withdraw')
-  },
-
-  //todo:  Метод повертає поточний баланс
-  getBalance() {
-    return this.balance;
-   },
-
-  //todo:  Метод шукає і повертає об'єкт транзакції по id
-  getTransactionDetails(id) { },
-
-  //todo:  Метод повертає кількість коштів
-  //todo:  певного типу транзакції з усієї історії транзакцій
-  getTransactionTotal(type) { },
-};
-//! Код виконаного завдання
-account.deposit(100);
-account.deposit(100);
-account.deposit(100);
-account.deposit(100);
-
-account.withdraw(100);
-console.log("--------------------------------------------------");
+// account.withdraw(100);
+// console.log("--------------------------------------------------");
 
 // const currentTime = new Date();
 
@@ -509,3 +495,22 @@ console.log("--------------------------------------------------");
 // while (currentTime >= lessonStartTime && currentTime < lessonEndTime) {
 //     console.log(`«Менторська година» (додаткове заняття):`);
 // };
+
+//todo var.1
+function example1(arr) {
+	arr.reduce(
+		(acc, element, index) => {
+			//!
+			console.log(`acc: ${acc}, index: ${index}, element:${element}`)
+		}, 0)
+}
+example1(['Робітник1', 'Робітник2', 'Робітник3'])
+
+function example2(arr) {
+	arr.reduce(
+		(acc, element, index) => {
+			//!
+			console.log(`index: ${index}, element:${element}`)
+		}, 0)
+}
+example2(['Робітник1', 'Робітник2', 'Робітник3'])
