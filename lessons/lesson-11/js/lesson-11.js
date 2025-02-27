@@ -1,76 +1,68 @@
 //todo [1]
 console.log('%c [1] ', 'color: yellow; background-color: #2274A5')
-//? ✴️ Створіть об'єкт "bankAccount" з трьома властивостями:
-//?  "ownerName", "accountNumber", "balance"
-//? та додайте їм будь-яких логічних значень значень.
-//? ✴️ За допомогою додавання властивостей
-//? додайте до об'єкту метод "deposit",
-//? який, використовуючи методи взаємодії з користувачем,
-//? додає гроші на рахунок,
-//? та виводить повідомлення про залишок на рахунку
-//? дублюючи його в консоль.
-//? ✴️ За допомогою додавання властивостей,
-//? додайте до об'єкту метод "withdraw",
-//? який, використовуючи методи взаємодії з користувачем,
-//? дозволяє знімати гроші з рахунку,
-//? якщо на рахунку достатньо коштів,
-//? та виводить повідомлення про залишок на рахунку,
-//? дублюючи його в консоль.
-//? Якщо на рахунку не вистачає коштів, то він виводить повідомлення:
-//? "⛔️ Не достатньо коштів на вашому рахунку!",
-//? дублюючи його в консоль.
-//? ✳️ За допомогою виклика методу "deposit" об'єкта "bankAccount" додай кошти на рахунок.
-//? ✳️ За допомогою виклика методу "withdraw" об'єкта "bankAccount" зніми кошти з рахуноку.
-//! Код виконаного завдання
+
 const bankAccount = {
 	ownerName: 'Pedro Diviroli',
 	accountNumber: '487676382939087',
 	balance: 203568139
 }
 
-bankAccount.deposit = function (money) {
-	this.balance += money
-	console.log(`Твій депозит: ${this.balance}`)
-}
-bankAccount.deposit(100000000)
-console.log('Депозит: ', bankAccount.balance)
+bankAccount.deposit = function () {
+	const moneyInput = prompt("Введіть суму для депозиту:").trim();
+	const money = Number(moneyInput);
 
-bankAccount.withdraw = function (money) {
-	if (money > this.balance) {
-		return console.log('⛔️ Помилка, недостатньо грошей для проведення транзакції!')
-	 }
-	this.balance -= money
-	console.log(`Твій депозит: ${this.balance}`)
+	if (!moneyInput || isNaN(money) || money <= 0) {
+		console.log("⛔️ Некоректна сума! Будь ласка, введіть додатне число.");
+		return;
+	}
+	this.balance += money;
+	console.log(`Твій депозит: ${this.balance}`);
 }
-bankAccount.withdraw(403568139)
-console.log('Депозит: ', bankAccount.balance)
+bankAccount.deposit();
+
+bankAccount.withdraw = function () {
+	const moneyInput = prompt("Введіть суму для зняття:").trim();
+	const money = Number(moneyInput);
+
+	if (!moneyInput || isNaN(money) || money <= 0) {
+		console.log("⛔️ Некоректна сума! Будь ласка, введіть додатне число.");
+		return;
+	}
+	if (money > this.balance) {
+		console.log('⛔️ Помилка, недостатньо грошей для проведення транзакції!');
+		return;
+	}
+	this.balance -= money;
+	console.log(`Твій залишок: ${this.balance}`);
+}
+bankAccount.withdraw();
+
 
 console.log('--------------------------------------------------')
 
 //todo [2]
 console.log('%c [2] ', 'color: yellow; background-color: #2274A5')
-//? ✴️ Створіть об'єкт "weather" з трьома властивостями:
-//? "temperature", "humidity", "windSpeed"
-//? та додайте їм будь-яких логічних значень значень.
-//? ✴️ За допомогою додавання властивостей
-//? додайте до об'єкту метод,
-//? який, використовуючи методи взаємодії з користувачем,
-//? отримує значення температури та повертає "true",
-//? якщо температура нижче 0 градусів Цельсія,
-//? та "false", якщо температура вище або дорівнює 0 градусів Цельсія.
-//? ✳️ Якщо метод повернув "true" вивести повідомлення
-//? “Температура нижче 0 градусів Цельсія” і навпаки,
-//? дублюючи ці повідомлення  в консоль.
-//! Код виконаного завдання
+
 const weather = {
-    temperature: 3,
+    temperature: null,
     humidity: 60,
     windSpeed: 10
 };
 
+do {
+    const tempInput = prompt("Введіть температуру:").trim();
+    const temp = Number(tempInput);
+
+    if (!tempInput || isNaN(temp)) {
+        console.log("⛔️ Некоректне значення! Будь ласка, введіть число.");
+    } else {
+        weather.temperature = temp;
+        break;
+    }
+} while (true);
+
 weather.isBelowZero = function () {
-    const temp = this.temperature;
-    if (temp < 0) {
+    if (this.temperature < 0) {
         console.log("Температура нижче 0 градусів Цельсія ❄️");
         return true;
     } else {
@@ -99,32 +91,43 @@ console.log('%c [3] ', 'color: yellow; background-color: #2274A5')
 //? треба послідовно вивести в косоль значення ВСІХ цих даних.
 //! Код виконаного завдання
 const user = {
-	name: "Pedro",
-	email: "pedrodiv@aey-corp.com",
-	password: "PedroDiveroli123"
+	name: "",
+	email: "",
+	password: ""
 };
 
-user.login = function () {
-	let errors = [];
-
-	if (this.name.length < 3) {
-			errors.push("❌ Ім'я повинно містити не менше 3 символів");
-	}
-	if (!this.email.includes('@') || !this.email.includes('.')) {
-			errors.push("❌ Некоректна електронна пошта");
-	}
-	if (this.password.length < 6) {
-			errors.push("❌ Пароль повинен містити не менше 6 символів");
-	}
-
-	if (errors.length > 0) {
-			console.log(errors.join("\n"));
+do {
+	user.name = prompt("Введіть ім'я:").trim();
+	if (!user.name || user.name.length < 3) {
+		console.log("❌ Ім'я повинно містити не менше 3 символів");
 	} else {
-			console.log("✅ Логін успішний!");
-			console.log(`Ім'я: ${this.name}`);
-			console.log(`Email: ${this.email}`);
-			console.log(`Пароль: ${this.password}`);
+		break;
 	}
+} while (true);
+
+do {
+	user.email = prompt("Введіть email:").trim();
+	if (!user.email || !user.email.includes('@') || !user.email.includes('.')) {
+		console.log("❌ Некоректна електронна пошта");
+	} else {
+		break;
+	}
+} while (true);
+
+do {
+	user.password = prompt("Введіть пароль:").trim();
+	if (!user.password || user.password.length < 6) {
+		console.log("❌ Пароль повинен містити не менше 6 символів");
+	} else {
+		break;
+	}
+} while (true);
+
+user.login = function () {
+	console.log("✅ Логін успішний!");
+	console.log(`Ім'я: ${this.name}`);
+	console.log(`Email: ${this.email}`);
+	console.log(`Пароль: ${this.password}`);
 };
 
 user.login();
