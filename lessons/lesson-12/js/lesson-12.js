@@ -14,6 +14,9 @@ const user = {
 	premium: true,
 };
 //! Код виконаного завдання
+	Object.assign(user, {mood: 'happy', hobby: 'skydiving', premium: false});
+
+	console.log(user);
 
 console.log("--------------------------------------------------");
 
@@ -29,6 +32,7 @@ console.log(
 //! Код виконаного завдання
 const countProps = function (obj) {
 	//! твій код
+	return Object.keys(obj).length;
 };
 //! Викличи функції для перевірки працездатності твоєї реалізації.
 console.log(countProps({})); //! 0
@@ -49,6 +53,15 @@ console.log(
 //! Код виконаного завдання
 const findBestEmployee = function (employees) {
 	//! твій код
+	let bestEmployee = '';
+	let bestTasks = 0;
+	for (const [nameBestEmployee, tasks] of Object.entries(employees)){
+		if (tasks > bestTasks){
+			bestTasks = tasks;
+			bestEmployee = nameBestEmployee;
+		}
+	}
+	return bestEmployee;
 };
 
 //! Викличи функції для перевірки працездатності твоєї реалізації.
@@ -91,7 +104,13 @@ console.log(
 //! Код виконаного завдання
 const countTotalSalary = function (employees) {
 	//! твій код
+	let totalAmount = 0;
+	for (const amount of Object.values(employees)){
+		totalAmount += amount;
+	}
+	return totalAmount;
 };
+
 
 //! Викличи функції для перевірки працездатності твоєї реалізації.
 console.log(countTotalSalary({})); //! 0
@@ -133,6 +152,17 @@ const products = [
 
 const getAllPropValues = function (arr, prop) {
 	//! твій код
+
+
+	const elements = [];
+
+	for (const item of arr){
+		if(item.hasOwnProperty(prop)){
+			elements.push(item[prop]);
+		}
+	}
+	return elements;
+
 };
 
 //! Викличи функції для перевірки працездатності твоєї реалізації.
@@ -146,13 +176,18 @@ console.log(
 	"%c [6] ",
 	"color: yellow; background-color: #2274A5",
 );
-//? Напиши функцію calculateTotalPrice(allProdcuts, productName), 
+//? Напиши функцію calculateTotalPrice(allProducts, productName), 
 //? яка отримує масив об'єктів та ім'я продукту (значення властивості name). 
 //? Повертає загальну вартість продукту (ціна * кількість).
 //? Викличи функції для перевірки працездатності твоєї реалізації.
 //! Код виконаного завдання
 const calculateTotalPrice = function (allProdcuts, productName) {
 	//! твій код
+	const findProduct = allProdcuts.find(
+		product => product.name === productName)
+		return findProduct
+		? findProduct.price * findProduct.quantity
+		: 'Product not found'
 };
 
 //! Викличи функції для перевірки працездатності твоєї реалізації.
