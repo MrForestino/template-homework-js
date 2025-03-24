@@ -92,22 +92,15 @@ const ingredients = [
 //? в список ul.ingredients.
 //? 🔸 Для створення DOM-вузлів використовуй document.createElement().
 //! Код виконаного завдання
-// const listIngredients = document.querySelector('#ingredients')
 
-// for(const items of listItems){
-// 	// const {label, color} = element;
-// 	const button = document.createElement('button');
-// 	button.classList.add('color-picker_button')
-// 	button.style.backgroundColor = color;
-// 	button.textContent = label;
-// 	button.style.width = '60px';
-// 	button.style.height = '30px';
-// 	button.style.color = 'white';
-// 	button.style.border = 'none';
-// 	button.style.borderRadius = '5px'
-// 	listIngredients.append(button);
-
-// }
+const listIngredients = document.querySelector("#ingredients");
+const items = ingredients
+  .map((ingredient) => {
+		const li = document.createElement('li');
+		li.textContent = ingredient;
+		return li;
+	})
+listIngredients.append(...items);
 console.log("----------------------------------------------------------------");
 
 
@@ -147,7 +140,17 @@ const images = [
 //? 🔸 Додай мінімальне оформлення галереї флексбоксами
 //? або грід через css-класи.
 //! Код виконаного завдання
-
+const gallery = document.querySelector("#gallery");
+const markup = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+  .join("");
+gallery.insertAdjacentHTML("beforeend", markup);
+document.querySelectorAll("ul > li").forEach(li => {
+	li.style.listStyle = 'none';
+});
+document.querySelectorAll("ul > li > img").forEach(img => {
+	img.style.width = "320px";
+});
 console.log("----------------------------------------------------------------");
 
 //todo [4]
