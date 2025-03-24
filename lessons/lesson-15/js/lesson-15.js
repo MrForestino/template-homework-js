@@ -101,6 +101,10 @@ console.log(
 //? Отримати загальну суму балансу (поле balance) всіх користувачів.
 const calculateTotalBalance = users => {
 	//! твій код
+	const allTotalBalances = users.reduce((sum, totalBalance)=>
+		sum + totalBalance.balance, 0
+	)
+	return allTotalBalances
 };
 
 console.log(calculateTotalBalance(users)); //! 20916
@@ -116,6 +120,13 @@ console.log(
 //? Отримати масив імен всіх користувачів у яких є друг із зазначеним ім'ям.
 const getUsersWithFriend = (users, friendName) => {
 	//! твій код
+	const friendList = users.reduce((acc, friendsList)=>{
+		if (friendsList.friends.includes(friendName)){
+			acc.push(friendsList.name);
+		}
+		return acc
+	}, []);
+	return friendList
 };
 
 console.log(getUsersWithFriend(users, 'Briana Decker')); //! [ 'Sharlene Bush', 'Sheree Anthony' ]
@@ -133,6 +144,9 @@ console.log(
 //? відсортованих в залежності від кількості їх друзів (поле friends)
 const getNamesSortedByFriendsCount = users => {
 	//! твій код
+	const toSortedFriends = users.toSorted((a, b) => a.friends.length - b.friends.length).map(user => user.name)
+	return toSortedFriends
+
 };
 
 console.log(getNamesSortedByFriendsCount(users)); //! [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
@@ -150,6 +164,10 @@ console.log(
 //? і вони повинні бути відсортовані в алфавітному порядку.
 const getSortedUniqueSkills = users => {
 	//! твій код
+	const toSortedSkills = users.toSorted((a, b) => a.skills.length - b.skills.length).flatMap(user => user.skills)
+	.filter((skills, index, array) => array.indexOf(skills) === index)
+	.sort((a, b) => a.localeCompare(b));
+	return toSortedSkills
 };
 
 console.log(getSortedUniqueSkills(users)); //! [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
