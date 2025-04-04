@@ -8,7 +8,7 @@ console.log(
 //? При обиранні на будь якого, колір фону боді змінюється відповідно.
 //? ✴️ В HTML є така форма:
 /*
-<form class="html-box">
+<form class="form">
 	<p>Choose a color:</p>
 	<label>
 	<input type="radio" name="color" value="red" />
@@ -26,8 +26,6 @@ console.log(
 */
 //! Код виконаного завдання
 const form = document.querySelector('.form');
-const checkedInput = form.querySelector("input:checked")
-console.log("checkedInput: ",checkedInput);
 
 const changeColor = function (event){
 	console.log("event.target: ", event.target);
@@ -35,7 +33,7 @@ const changeColor = function (event){
 	const input = event.target;
 	console.log(input.value);
 	const body = document.querySelector("body");
-	body.style.backGroundColor = input.value;
+	body.style.backgroundColor = input.value;
 };
 
 form.addEventListener("change", changeColor);
@@ -58,7 +56,12 @@ console.log(
 <h1>Привіт, <span id="name-output">незнайомець</span>!</h1>
 */
 //! Код виконаного завдання
+const input = document.getElementById("name-input");
+const span = document.getElementById("name-output");
 
+input.addEventListener("input", (changeSpan) => {
+	span.textContent = changeSpan.currentTarget.value.trim() || "НЕЗНАЙОМЕЦЬ";
+});
 console.log("--------------------------------------------------");
 
 
@@ -99,7 +102,23 @@ console.log(
 }
 */
 //! Код виконаного завдання
+const ValidationInput = document.getElementById('validation-input');
 
+const InspectsInput = function (){
+	console.log("ValidationInput.dataset.length:", ValidationInput.dataset.length);
+	console.log("ValidationInput.value.length:", ValidationInput.value.length);
+
+	ValidationInput.classList.remove('valid', 'invalid');
+
+	if(ValidationInput.value.length >= Number(ValidationInput.dataset.length)){
+		ValidationInput.classList.add('valid');
+	} else{
+		ValidationInput.classList.add('invalid');
+	};
+
+};
+
+ValidationInput.addEventListener('blur', InspectsInput);
 console.log("--------------------------------------------------");
 
 
@@ -121,5 +140,14 @@ console.log(
 <input id="font-size-control" type="range" />
 */
 //! Код виконаного завдання
+const inputFontSizeControl = document.getElementById("font-size-control");
+const abrakadabra = document.getElementById("text");
 
+const changeFontSize = function(){
+	abrakadabra.style.fontSize = `${inputFontSizeControl.value}px`;
+	
+};
+inputFontSizeControl.addEventListener('input', changeFontSize);
+
+changeFontSize();
 console.log("--------------------------------------------------");
