@@ -83,7 +83,7 @@ button:hover {
 ul.gallery.slider {
  position: absolute;
 	outline: 2px dashed green; 
-	left: -600px;
+	left: 0;
 	top: 0;
 	width: max-content;
   height: 100%;
